@@ -1,9 +1,17 @@
 import React from 'react';
-import { Text } from 'react-native';
 import './config/ReactotronConfig';
+import { StatusBar } from 'react-native';
+import Routes from './routes';
+import Header from './components/Header';
 
 function App() {
-  return <Text>OLá Mundo</Text>;
+  return (
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#141419" />
+      <Header />
+      <Routes />
+    </>
+  );
 }
 
 export default App;
