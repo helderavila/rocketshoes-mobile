@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -5,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Main from './pages/Main';
 import Cart from './pages/Cart';
+import Header from './components/Header';
 
 const Stack = createStackNavigator();
 
@@ -16,13 +18,15 @@ function Routes() {
           name="Main"
           component={Main}
           options={{
-            headerShown: false,
+            header: navigation => <Header {...navigation} />,
           }}
         />
         <Stack.Screen
           name="Cart"
           component={Cart}
-          options={{ title: 'Cart' }}
+          options={{
+            header: navigation => <Header {...navigation} />,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
