@@ -50,8 +50,12 @@ export const Amount = styled.TextInput`
   width: 51px;
   height: 26px;
   margin-left: 10px;
+  font-size: 14px;
+  padding: 5px;
 `;
-export const SubTotal = styled.Text`
+export const SubTotal = styled.Text.attrs({
+  readonly: true,
+})`
   font-size: 16px;
   font-weight: bold;
   margin-right: 10px;

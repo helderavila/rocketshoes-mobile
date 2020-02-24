@@ -36,7 +36,7 @@ function Cart({ cart }) {
               </Info>
             </InfoProducts>
             <Form>
-              <Amount value={item.amount} />
+              <Amount value={String(item.amount)} />
               <SubTotal>R$5000</SubTotal>
             </Form>
           </Product>
