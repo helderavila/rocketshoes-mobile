@@ -45,14 +45,29 @@ export const Form = styled.View`
   border-radius: 5px;
   justify-content: space-between;
 `;
+
+export const AmountContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+`;
+
+export const RemoveAmount = styled(RectButton)`
+  padding: 10px;
+`;
+
+export const AddAmount = styled(RectButton)`
+  padding: 10px;
+`;
+
 export const Amount = styled.TextInput`
   background: #fff;
   width: 51px;
   height: 26px;
-  margin-left: 10px;
   font-size: 14px;
   padding: 5px;
 `;
+
 export const SubTotal = styled.Text.attrs({
   readonly: true,
 })`
