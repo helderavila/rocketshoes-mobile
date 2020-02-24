@@ -32,6 +32,9 @@
 
 <h1 align="center">
     <img alt="Rocketshoes" title="#delicinha" width="200px" src="https://i.imgur.com/OUG5TDw.png" />
+    <img alt="Rocketshoes" title="#delicinha" width="200px" src="https://i.imgur.com/Q0Uf5qV.png" />
+    <img alt="Rocketshoes" title="#delicinha" width="200px" src="https://i.imgur.com/o5vIykK.png" />
+
 </h1>
 
 <br>
