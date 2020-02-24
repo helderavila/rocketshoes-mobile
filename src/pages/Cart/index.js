@@ -26,15 +26,29 @@ import {
   AmountContainer,
   RemoveAmount,
   AddAmount,
+  EmptyCart,
+  EmptyCartText,
+  ContainerEmpty,
 } from './styles';
 
-function Cart({ cart, removeFromCart, updateAmount, total }) {
+function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
   function increment(product) {
-    updateAmount(product.id, product.amount + 1);
+    updateAmountRequest(product.id, product.amount + 1);
   }
 
   function decrement(product) {
-    updateAmount(product.id, product.amount - 1);
+    updateAmountRequest(product.id, product.amount - 1);
+  }
+
+  if (cart.length === 0) {
+    return (
+      <ContainerEmpty>
+        <EmptyCart>
+          <Icon name="remove-shopping-cart" size={78} color="#eee" />
+          <EmptyCartText>Seu carrinho está vazio!</EmptyCartText>
+        </EmptyCart>
+      </ContainerEmpty>
+    );
   }
 
   return (

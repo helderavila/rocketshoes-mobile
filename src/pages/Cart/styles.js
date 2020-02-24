@@ -120,3 +120,25 @@ export const EditContainer = styled.View`
   align-items: center;
   margin-right: 10px;
 `;
+
+export const ContainerEmpty = styled.View`
+  background: #191920;
+  flex: 1;
+`;
+
+export const EmptyCart = styled.View`
+  width: 350px;
+  background: #fff;
+  margin: 10px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+`;
+
+export const EmptyCartText = styled.Text`
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+`;
