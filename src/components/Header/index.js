@@ -11,12 +11,12 @@ function Header({ cartSize }) {
       <Logo source={LogoImage} />
       <Cart>
         <Icon name="shopping-cart" size={24} color="#fff" />
-        <Item>{cartSize}</Item>
+        <Item>{cartSize || 0}</Item>
       </Cart>
     </Container>
   );
 }
 
 export default connect(state => ({
-  cartSize: state.cart.lenght,
+  cartSize: state.cart.length,
 }))(Header);
