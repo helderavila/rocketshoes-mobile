@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   Container,
   CartList,
@@ -18,9 +18,11 @@ import {
   Total,
   SubmitButton,
   SubmitButtonText,
+  RemoveButton,
+  EditContainer,
 } from './styles';
 
-function Cart({ cart }) {
+function Cart({ cart, dispatch }) {
   return (
     <Container>
       <CartList
@@ -37,7 +39,16 @@ function Cart({ cart }) {
             </InfoProducts>
             <Form>
               <Amount value={String(item.amount)} />
-              <SubTotal>R$5000</SubTotal>
+              <EditContainer>
+                <SubTotal>R$5000</SubTotal>
+                <RemoveButton
+                  onPress={() =>
+                    dispatch({ type: 'REMOVE_FROM_CART', id: item.id })
+                  }
+                >
+                  <Icon name="remove-shopping-cart" size={18} color="#7159c1" />
+                </RemoveButton>
+              </EditContainer>
             </Form>
           </Product>
         )}

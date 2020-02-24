@@ -95,3 +95,13 @@ export const SubmitButtonText = styled.Text`
   color: #fff;
   font-weight: bold;
 `;
+
+export const RemoveButton = styled(RectButton)`
+  padding: 5px;
+`;
+
+export const EditContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+`;
