@@ -31,7 +31,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="Rocketshoes" title="#delicinha" width="450px" src="https://i.imgur.com/OUG5TDw.png" />
+    <img alt="Rocketshoes" title="#delicinha" width="300px" height="300px" src="https://i.imgur.com/OUG5TDw.png" />
 </h1>
 
 <br>
