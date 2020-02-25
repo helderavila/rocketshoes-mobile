@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-alert */
 import { call, put, all, takeLatest, select } from 'redux-saga/effects';
 import api from '../../../services/api';
 import { formatPrice } from '../../../util/format';
@@ -18,11 +20,13 @@ function* addToCart({ id }) {
 
   if (amount > stockAmount) {
     console.tron.warn('ERRO');
+    alert('Quantidade solicitada fora de estoque');
     return;
   }
 
   if (productExists) {
     yield put(updateAmountSuccess(id, amount));
+    alert('Produto adicionado ao carrinho');
   } else {
     const response = yield call(api.get, `/products/${id}`);
 
@@ -33,6 +37,7 @@ function* addToCart({ id }) {
     };
 
     yield put(AddToCartSuccess(data));
+    alert('Produto adicionado ao carrinho');
   }
 }
 
@@ -43,7 +48,7 @@ function* updateAmount({ id, amount }) {
   const stockAmount = stock.data.amount;
 
   if (amount > stockAmount) {
-    console.tron.warn('ERRO');
+    alert('Quantidade solicitada fora de estoque');
     return;
   }
 
