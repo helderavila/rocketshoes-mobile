@@ -72,7 +72,7 @@ export default function Cart() {
     <Container>
       <CartList
         data={cart}
-        keyExtractor={cart.id}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <Product>
             <InfoProducts>
