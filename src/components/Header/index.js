@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Container, Logo, Cart, Item } from './styles';
 
@@ -18,3 +19,9 @@ export default function Header({ navigation }) {
     </Container>
   );
 }
+
+Header.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
+};
